@@ -1,7 +1,8 @@
 # Corewar
 ## Team : <a href="https://github.com/suddin0">sam0</a> and <a href="https://github.com/chowchow42">chowchow</a>
 ## Quick Description
-C Corewar - 42 implementation
+C Corewar - 42 implementation <br/>
+The game is simple, 2 or more programs compete in order to take over the virtual computer<br/>
 ## Run it
 Compile the whole project :<br/>
   <code>make && make clean</code><br/>
