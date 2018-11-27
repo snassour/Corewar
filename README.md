@@ -7,7 +7,7 @@ The game is simple, 2 or more programs compete in order to take over the virtual
 Compile the whole project :<br/>
   <code>make && make clean</code><br/>
 Compile your Corewar champion(s) :<br/>
-  <code>./asm [CHAMPION_1].s [OPTIONAL [CHAMPION_2.s] [CHAMPION_3.s]]</code><br/>
+  <code>./asm [CHAMPION_1].s [OPTIONAL [CHAMPION_2.s] [CHAMPION_3.s] ...]</code><br/>
 Run the VM :<br/>
   <code>./corewar [OPTIONAL : [--tui or -t] [-dump num_cycles]] [CHAMPION(s).cor]</code><br/>
 Decompiler :<br/>
