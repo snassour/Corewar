@@ -1,0 +1,96 @@
+- Check every `Cycle to die` that a all processes called live at least once
+- after `NBR_LIVE` LIVE calls decreas the value of `Cycle to die` by 50
+
+- last one telling live (last one telling the live with appropriate player number) wins
+
+
+List of things to show:
+-[X] if pausing works then show play pause status
+-[X] show speed limit
+-[X] show all player number and name
+-[X] Show cycle
+-[X] show cycle to die
+-[X] show number fo live called
+-[ ] Show pocess que informations
+	-[ ] number of processes in process que
+-[ ] show process information
+	-[ ] process id
+	-[ ] process live call
+	-[ ] show process registers (PC, CF, R1 - R6) befor and after changes in hexa decimal values
+	-[ ] instruction that is being executed
+
+
+
+- Ncurses Mac
+	ncurses is keg-only, which means it was not symlinked into /Users/suddin/.brew,
+	because macOS already provides this software and installing another version in
+	parallel can cause all kinds of trouble.
+
+	If you need to have ncurses first in your PATH run:
+	echo 'export PATH="/Users/suddin/.brew/opt/ncurses/bin:$PATH"' >> ~/.zshrc
+
+	For compilers to find ncurses you may need to set:
+	export LDFLAGS="-L/Users/suddin/.brew/opt/ncurses/lib"
+	export CPPFLAGS="-I/Users/suddin/.brew/opt/ncurses/include"
+
+	For pkg-config to find ncurses you may need to set:
+	export PKG_CONFIG_PATH="/Users/suddin/.brew/opt/ncurses/lib/pkgconfig"
+--------------------------------------------------------------------------------
+for local computer :
+For compilers to find ncurses you may need to set:
+  export LDFLAGS="-L/usr/local/opt/ncurses/lib"
+  export CPPFLAGS="-I/usr/local/opt/ncurses/include"
+
+
+Check the following instructions:
+	[X][01] live
+	[X][02] ld
+	[X][03] st
+	[ ][04] add
+	[ ][05] sub
+	[ ][06] and
+	[ ][07] or
+	[ ][08] xor
+	[ ][09] zjmp
+	[ ][10] ldi
+	[ ][11] sti
+	[ ][12] fork
+	[ ][13] lld
+	[ ][14] lldi
+	[ ][15] lfork
+	[ ][16] aff
+
+
+
+: - asm error
+
+01: dev null ca tourne en boucle
+02: fichier bigbig.s
+03: quand il y a pas de '\n' le message d'erreur n'estpas correcte.
+
+
+last update in coreware:
+	update: 05.09.2018
+	- Changed the type of registers in t_vproc from uint32_t to int32_t.
+		and with it all the function that modified registers such as fork  etc..
+	- changed the togling system, there was two memory reads next to each other
+		Which was bad, they have been separated proparly
+	- Added the speed controle based on time thus not duing same stupid shit
+		as `zaz` by waiting like an idiot for the sleep to stop.
+	
+
+
+
+last update in asm:
+	update: 02.09.2018
+	- Repeared the error when a comment char was attached with some type which
+		was considered as some special object.
+	- Changed some `printf` which showed errors to `ft_printf_error`.
+	- Changed the error message in verify_int_indirect (added the word indirect).
+	- reduced argument size in `lex_string` from 5 to 4 (for the FUCKING NORM!!
+		Which ofcorse reduced some security...).
+	- Added error message when the file could not be splited by newline because
+		the file is not an ASCII file.
+	- A usage was added when no file was given in the parameter (and only option)
+	- A help menu was added.
+	- A message on successful compilation which could be silenced bu the flag -q
